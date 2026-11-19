@@ -1,0 +1,30 @@
+#separator:comma
+#html:false
+#tags column:3
+Para que serve um ambiente virtual (venv) em Python?,"Isola as dependências de cada projeto, evitando conflitos de versões entre projetos e mantendo o Python do sistema limpo.",python ambiente
+Qual a diferença entre = e == em Python?,= atribui um valor a uma variável; == compara dois valores e retorna True ou False.,python basico
+"O que range(1, 5) produz?","Os inteiros 1, 2, 3 e 4 (o limite final é exclusivo).",python basico
+Qual a diferença entre git add e git commit?,git add coloca as mudanças na área de preparação (staging); git commit grava no histórico uma fotografia do que está preparado.,git
+Qual a diferença entre git commit e git push?,"commit grava no repositório local; push envia os commits para o repositório remoto (por exemplo, o GitHub).",git
+O que git branch permite fazer e por que usar branches?,"Criar linhas independentes de desenvolvimento, para trabalhar em algo sem afetar a main até estar pronto.",git
+Por que 0.1 + 0.2 == 0.3 é False em Python?,"Números de ponto flutuante têm erro de representação binária. Compare com tolerância, por exemplo com math.isclose.",python conceito
+Qual a diferença entre is e == em Python?,== compara valores; is compara identidade (se são o mesmo objeto na memória).,python conceito
+"Por que é perigoso usar uma lista como valor padrão de parâmetro (def f(x, lst=[]))?","O valor padrão é criado uma única vez e compartilhado entre chamadas, então a lista acumula mudanças. Use None e crie a lista dentro da função.",python conceito
+"Lista, tupla, conjunto e dicionário: quando usar cada um?",Lista: sequência mutável e ordenada. Tupla: sequência imutável. Conjunto: itens únicos e teste de pertencimento rápido. Dicionário: associação chave para valor com busca rápida pela chave.,python estruturas
+O que o with open(...) garante?,"Que o arquivo seja fechado ao sair do bloco, mesmo se ocorrer um erro dentro dele.",python arquivos
+Qual a diferença entre dict[chave] e dict.get(chave) quando a chave não existe?,dict[chave] levanta KeyError; dict.get(chave) retorna None (ou o padrão informado).,python estruturas
+"Depois de a = [1, 2]; b = a; b.append(3), qual o valor de a?","[1, 2, 3]. b aponta para a mesma lista. Para copiar, use a.copy() ou list(a).",python conceito
+Por que evitar um except: sem tipo?,"Captura qualquer coisa, inclusive erros que você não previu e a interrupção do teclado, escondendo bugs. Trate o tipo mais específico possível.",python erros
+Qual a diferença entre ValueError e TypeError?,"TypeError: o tipo é inadequado para a operação. ValueError: o tipo está certo, mas o valor é inadequado (por exemplo, int('abc')).",python erros
+O que é uma stack trace e por onde começar a lê-la?,É a lista de chamadas até o erro. Comece pela última linha (tipo e mensagem do erro) e depois pelo trecho mais recente do seu próprio código.,depuracao
+"O que significa o ciclo vermelho, verde, refatorar no TDD?","Escreva um teste que falha (vermelho), faça o mínimo para ele passar (verde) e melhore o código mantendo os testes passando (refatorar).",testes
+Por que um teste que nunca falhou pode ser inútil?,Ele pode estar testando nada (sempre passa). Ver o teste falhar antes de implementar prova que ele detecta o problema.,testes
+Por que não colocar print() dentro de funções de lógica?,"Mistura regra de negócio com interface, dificulta testar e reutilizar. Funções retornam dados ou levantam exceções; a interface mostra as mensagens.",design testes
+"Por que separar lógica, armazenamento e interface?","Cada parte pode mudar e ser testada isoladamente, o que reduz o acoplamento e facilita a manutenção.",design
+Qual a diferença entre erro do usuário e erro de programação?,Erro do usuário é entrada inválida esperada: trate com mensagem amigável. Erro de programação é bug: deve aparecer e ser corrigido.,design erros
+O que faz if __name__ == '__main__':?,"Executa o bloco apenas quando o arquivo é rodado diretamente, e não quando é importado como módulo.",python conceito
+O que é memoização?,"Guardar resultados de chamadas já calculadas (por exemplo, em um dicionário) para não recalculá-los.",algoritmos
+O que significa O(n) na notação Big O?,Que o tempo (ou a memória) cresce proporcionalmente ao tamanho n da entrada.,algoritmos
+Por que buscar em um conjunto ou dicionário é mais rápido do que em uma lista?,"Eles usam tabela hash e encontram o item em tempo médio constante, O(1); a lista precisa percorrer os elementos, O(n).",algoritmos
+"Por que nunca commitar segredos (chaves, senhas, .env)?",O histórico do Git guarda tudo; um segredo vazado continua no histórico mesmo depois de apagado. Use .gitignore e variáveis de ambiente.,git seguranca
+O que é uma compreensão de lista e quando evitá-la?,[expr for x in itens if condicao] cria uma lista de forma concisa. Evite quando ficar aninhada ou difícil de ler.,python estruturas
